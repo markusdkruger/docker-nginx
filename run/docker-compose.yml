@@ -1,0 +1,11 @@
+version: '3'
+services:
+  nginx:
+    restart: always
+    image: "mynginx"
+    ports:
+     - "80:80"
+     - "443:443"
+    volumes:
+     - /opt/docker/nginx/ssl:/etc/nginx/ssl
+     - /opt/docker/nginx/conf.d:/etc/nginx/conf.d
